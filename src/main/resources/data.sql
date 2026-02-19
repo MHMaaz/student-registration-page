@@ -1,0 +1,1 @@
+insert into student_info values (1, 'BSCS', '2-12-2001', 'Miller');
