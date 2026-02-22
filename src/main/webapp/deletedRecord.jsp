@@ -11,8 +11,15 @@
     </head>
 
     <body>
+        <div class="alert alert-danger m-4" role="alert">
+            Student information deleted successfully!
+        </div>
         <h1 class="text-center">Student Deletion</h1>
-        <p>Student with ID ${StudentID} successfully deleted</p>
+        <p>Student with ID ${StudentID} <br> Name: ${toDropStudent.student_name} <br> Faculty: ${toDropStudent.student_dep} successfully deleted</p>
+
+        <a href="./main.jsp" class="btn btn-info" role="button">Go back to Panel</a>
+
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
             crossorigin="anonymous"></script>

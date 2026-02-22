@@ -11,7 +11,7 @@
     </head>
 
     <body>
-        <h1 class="text-center">Student Registeration</h1>
+        <h1 class="text-center">Student Registration Panel</h1>
         <form action="infoContainer" class="m-4">
             <input type="text" name="student_id" placeholder="Student ID Number"><br>
             <input type="text" name="student_name" placeholder="Student First Name"><br>
@@ -20,19 +20,18 @@
             <input type="submit" class="mt-4"><br>
             <!-- all this data, once we click submit, will go to form container. which will be handled by the controller! -->
         </form>
-
-        <form action="getStudent">
-            <input type="text" name="student_id" placeholder="Student ID Number to fetch"><br>
-            <input type="submit" name="submit">
+        <h2>Search for a Student:</h2>
+        <form action="getStudent" class="m-4 Container">
+            <input type="text" name="student_id" placeholder="Enter Student ID"><br>
+            <input type="submit" name="submit" class="mt-4">
         </form>
-
-        <form action="dropStudent">
-            <input type="text" name="student_id" placeholder="Student ID Number to delete"><br>
-            <input type="submit" name="submit">
+        <h2>Remove existing Student:</h2>
+        <form action="dropStudent" class="m-4">
+            <input type="text" name="student_id" placeholder="Enter Student ID"><br>
+            <input type="submit" name="submit" class="mt-4">
         </form>
-
-        <form action="updateStudentRecord">
-            <p>update</p>
+        <h2>Update existing Student:</h2>
+        <form action="updateStudentRecord" class="m-4">
             <input type="text" name="student_id" placeholder="Student ID Number"><br>
             <input type="text" name="student_name" placeholder="Student First Name"><br>
             <input type="text" name="student_dep" placeholder="Student Department"><br>

@@ -38,15 +38,16 @@ public class IndexPageController {
 
     @RequestMapping("/dropStudent")
     public ModelAndView dropStudent(@RequestParam("student_id") int studentID){
+        ModelAndView mav = new ModelAndView("deletedRecord");
 
         try {
             StudentInfo student = repo.findById(studentID).orElse(new StudentInfo()); // entity made 
+            mav.addObject("toDropStudent", student);
             repo.delete(student);
         } catch (Exception e) {
             System.out.println("Couldn't find Student by ID " + studentID);
         }
         
-        ModelAndView mav = new ModelAndView("deletedRecord");
         mav.addObject("StudentID", studentID);
         return mav;
     }
