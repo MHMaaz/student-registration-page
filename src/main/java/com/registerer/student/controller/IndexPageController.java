@@ -53,7 +53,7 @@ public class IndexPageController {
     }
 
     @RequestMapping("updateStudentRecord")
-    public ModelAndView updateStudentRecord(@RequestParam("student_id") int studentID, StudentInfo studentEntity){
+    public ModelAndView updateStudentRecord(@RequestParam("student_id") int studentID, StudentInfo studentEntity){ // this student entity is not the same as the one we found on line 59
         ModelAndView mav = new ModelAndView();
         try {
             StudentInfo student = repo.findById(studentID).orElse(new StudentInfo()); // with the help of student id we are finding the record containign everything in a row. We are not finding just the id but finding the whole record with the help of iD
